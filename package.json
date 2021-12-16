@@ -4,9 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "npm-run-all --parallel watch:server watch:build",
-    "watch:build": "webpack --watch",
-    "watch:server": "nodemon \"./dist/index.js\" --watch \"./dist\""
+    "watch:build": "webpack",
+    "watch:server": "webpack serve"
   },
   "author": "",
   "license": "ISC",

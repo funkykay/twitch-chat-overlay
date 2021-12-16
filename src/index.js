@@ -10,11 +10,9 @@ const client = new tmi.Client({
 });
 client.connect().catch(console.error);
 client.on('message', (channel, tags, message, self) => {
-	if(self) return;
+	if(self) {return};
 	
-	var z = document.createElement('p'); // is a node
-	
-	z.innerHTML = message;
-
-	document.body.appendChild(z);
+	var chatParagraph = document.createElement('p');
+	chatParagraph.innerHTML = message;
+	document.body.appendChild(chatParagraph);
 });
